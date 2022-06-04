@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+    <form action="">
+        <h1>Calculator</h1>
+        <input type="number" id="num1">
+        <input type="number" id="num2"> </br> </br>
+        <button id="btn" value="+" onclick="addCalculate()">Addition(+)</button>
+        <button id="btn" value="-" onclick="subCalculate()">Subtraction(-)</button>
+        <button id="btn" value="*" onclick="mulCalculate()">Multiplication(x)</button>
+        <button id="btn" value="/" onclick="divCalculate()">Division(/)</button>   
+        <div id="result"></br></div>
+    </form>
+</body>
+<script>
+    function addCalculate() {
+        let firstNum = document.getElementById('num1').value;
+        let secondNum = document.getElementById('num2').value;
+        let result = document.getElementById('result');
+        result.innerHTML = "Result Addition : " + (parseInt(firstNum)+parseInt(secondNum));
+    }
+    function subCalculate() {
+        let firstNum = document.getElementById('num1').value;
+        let secondNum = document.getElementById('num2').value;
+        let result = document.getElementById('result');
+        result.innerHTML = "Result Subtraction : " + (parseInt(firstNum)-parseInt(secondNum));
+    }
+    function mulCalculate() {
+        let firstNum = document.getElementById('num1').value;
+        let secondNum = document.getElementById('num2').value;
+        let result = document.getElementById('result');
+        result.innerHTML = "Result Multiplication : " + parseInt(firstNum)*parseInt(secondNum);
+    }
+    function divCalculate() {
+        let firstNum = document.getElementById('num1').value;
+        let secondNum = document.getElementById('num2').value;
+        let result = document.getElementById('result');
+        result.innerHTML = "Result Division : " + parseInt(firstNum)/parseInt(secondNum);
+    }
+</script>
+</html>
